@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7fbf8;
+  color: #0f172a;
+}
+
+.dark body {
+  background: #07140f;
+  color: #e5f7ef;
+}
+
+::selection {
+  background: #b7f5d3;
+  color: #062f20;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .surface {
+    @apply border border-slate-200 bg-white/90 shadow-soft backdrop-blur dark:border-white/10 dark:bg-slate-950/70;
+  }
+
+  .input {
+    @apply h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-900 outline-none transition focus:border-eco-500 focus:ring-4 focus:ring-eco-100 dark:border-white/10 dark:bg-slate-900 dark:text-white dark:focus:ring-eco-900/50;
+  }
+
+  .label {
+    @apply text-sm font-medium text-slate-700 dark:text-slate-200;
+  }
+
+  .btn {
+    @apply inline-flex h-11 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition focus:outline-none focus:ring-4 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-eco-600 text-white hover:bg-eco-700 focus:ring-eco-200 dark:focus:ring-eco-900;
+  }
+
+  .btn-secondary {
+    @apply btn border border-slate-200 bg-white text-slate-800 hover:border-eco-300 hover:text-eco-700 focus:ring-slate-100 dark:border-white/10 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-eco-700 dark:hover:text-eco-300 dark:focus:ring-white/10;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-200 dark:focus:ring-red-900;
+  }
+
+  .table-head {
+    @apply bg-slate-50 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:bg-white/5 dark:text-slate-400;
+  }
+
+  .table-cell {
+    @apply border-t border-slate-100 px-4 py-3 text-sm dark:border-white/10;
+  }
+}
