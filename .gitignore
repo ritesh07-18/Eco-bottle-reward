@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+
+# IDE / project metadata
+.idea/
+.vscode/
+
+# Local Supabase project metadata (project ref, version files)
+supabase/.temp/
+
+# Stale duplicate copy of the project (kept on disk only)
+Eco-bottle-reward-main/
