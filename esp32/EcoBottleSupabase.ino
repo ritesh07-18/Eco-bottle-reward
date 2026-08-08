@@ -1,3 +1,12 @@
+// ============================================================================
+// DEPRECATED - DO NOT USE
+// ----------------------------------------------------------------------------
+// This sketch posts {phone, bottle_type, machine_id} directly, but the current
+// Supabase Edge Function (esp32-bottle-intake) only accepts action:"login" and
+// action:"intake" with a short-lived session token. This old flow is rejected
+// with "action must be 'login' or 'intake'". Use esp32/EcoBottleTFT.ino instead.
+// ============================================================================
+
 #include <WiFi.h>
 #include <HTTPClient.h>
 
